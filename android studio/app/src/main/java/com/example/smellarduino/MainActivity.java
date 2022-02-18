@@ -11,8 +11,10 @@ public class MainActivity extends AppCompatActivity {
 
     private Button peachButton;
     private Button mangoButton;
+    private Button strawberryButton;
     private boolean peachSmellEnabled = false;
     private boolean mangoSmellEnabled = false;
+    private boolean strawberrySmellEnabled = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         peachButton = findViewById(R.id.button);
         mangoButton = findViewById(R.id.button2);
+        strawberryButton = findViewById(R.id.button3);
 
         peachButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +58,23 @@ public class MainActivity extends AppCompatActivity {
                     smellIntent.putExtra("fanSpeed", 1);
                     smellIntent.putExtra("fanLabel", "B");
                     mangoSmellEnabled = true;
+                }
+                startService(smellIntent);
+            }
+        });
+
+        strawberryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
+                if (strawberrySmellEnabled) {
+                    smellIntent.putExtra("fanSpeed", 0);
+                    smellIntent.putExtra("fanLabel", "C");
+                    strawberrySmellEnabled = false;
+                } else {
+                    smellIntent.putExtra("fanSpeed", 1);
+                    smellIntent.putExtra("fanLabel", "C");
+                    strawberrySmellEnabled = true;
                 }
                 startService(smellIntent);
             }

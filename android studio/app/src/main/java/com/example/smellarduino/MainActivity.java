@@ -5,8 +5,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,13 +20,33 @@ public class MainActivity extends AppCompatActivity {
     private boolean mangoSmellEnabled = false;
     private boolean strawberrySmellEnabled = false;
 
+    CarouselView carouselView;
+    int[] sampleImages = {R.drawable.strawberry, R.drawable.orange, R.drawable.pineapple, R.drawable.mango, R.drawable.peach, R.drawable.banana, R.drawable.banana_mango};
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+            Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
+            smellIntent.putExtra("fanSpeed", 0);
+            smellIntent.putExtra("fanLabel", "A");
+            startService(smellIntent);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_1);
 
+        Intent dispenseIntent = new Intent(this, BluetoothService.class);
+        startService(dispenseIntent);
 
+        carouselView = findViewById(R.id.carouselView);
+        carouselView.setPageCount(sampleImages.length);
+        carouselView.setImageListener(imageListener);
 
+/*
         // Connect to arduino via Bluetooth
 //        Intent dispenseIntent = new Intent(this, BluetoothService.class);
 //        startService(dispenseIntent);
@@ -82,5 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 startService(smellIntent);
             }
         });
+
+ */
     }
 }

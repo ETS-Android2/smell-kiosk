@@ -2,15 +2,21 @@ package com.example.smellarduino;
 
 public class MenuItem {
     private String name;
-    private String imageUrl;
+    private String drawable;
     private String scentString;
+
+    public MenuItem(String name, String drawable, String scentString) {
+        this.name = name;
+        this.drawable = drawable;
+        this.scentString = scentString;
+    }
 
     public String getName() {
         return name;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getDrawable() {
+        return drawable;
     }
 
     public String getScentString() {
@@ -21,8 +27,8 @@ public class MenuItem {
         this.name = name;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setDrawable(String drawable) {
+        this.drawable = drawable;
     }
 
     public void setScentString(String scentString) {

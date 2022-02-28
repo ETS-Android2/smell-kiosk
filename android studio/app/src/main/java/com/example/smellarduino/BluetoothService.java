@@ -51,13 +51,7 @@ public class BluetoothService extends Service {
         else {
             // Get the number of tickets to be dispensed
             try {
-                int fanSpeed = intent.getIntExtra("fanSpeed", -1);
-                String fanLabel = intent.getStringExtra("fanLabel");
-                if(fanSpeed > -1) {
-                    // Dispense tickets
-                    sendData(fanLabel, fanSpeed);
-                    //Toast.makeText(this, "Setting fan speed to " + fanSpeed, Toast.LENGTH_SHORT).show();
-                }
+                sendData(intent.getStringExtra("fanControl"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -170,13 +164,8 @@ public class BluetoothService extends Service {
         workerThread.start();
     }
 
-    void sendData(String fanLabel, int fanSpeed) throws IOException {
-        if (fanSpeed > 255) {
-            fanSpeed = 255;
-        } else if (fanSpeed<0) {
-            fanSpeed = 0;
-        }
-        String msg = fanLabel + fanSpeed + "\n";
+    void sendData(String fanControl) throws IOException {
+        String msg = fanControl + "\n";
         if (mmOutputStream!=null) {
             mmOutputStream.write(msg.getBytes());
         } else {

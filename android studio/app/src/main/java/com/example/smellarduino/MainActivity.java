@@ -5,107 +5,65 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
-
-    private ConstraintLayout peachButton;
-    private ConstraintLayout mangoButton;
-    private ConstraintLayout strawberryButton;
-    private boolean peachSmellEnabled = false;
-    private boolean mangoSmellEnabled = false;
-    private boolean strawberrySmellEnabled = false;
-
-    CarouselView carouselView;
-    int[] sampleImages = {R.drawable.strawberry, R.drawable.orange, R.drawable.pineapple, R.drawable.mango, R.drawable.peach, R.drawable.banana, R.drawable.banana_mango};
-
-    ImageListener imageListener = new ImageListener() {
-        @Override
-        public void setImageForPosition(int position, ImageView imageView) {
-            imageView.setImageResource(sampleImages[position]);
-            Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-            smellIntent.putExtra("fanSpeed", 0);
-            smellIntent.putExtra("fanLabel", "A");
-            startService(smellIntent);
-        }
-    };
+    private LinearLayout menuLayout;
+    private ImageView bigImage;
+    private ArrayList<MenuItem> menuItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_1);
+        setContentView(R.layout.activity_main);
 
         Intent dispenseIntent = new Intent(this, BluetoothService.class);
         startService(dispenseIntent);
 
-        carouselView = findViewById(R.id.carouselView);
-        carouselView.setPageCount(sampleImages.length);
-        carouselView.setImageListener(imageListener);
+        menuLayout = this.findViewById(R.id.MenuLayout);
+        bigImage = this.findViewById(R.id.BigImage);
 
-/*
-        // Connect to arduino via Bluetooth
-//        Intent dispenseIntent = new Intent(this, BluetoothService.class);
-//        startService(dispenseIntent);
+        menuItems.add(new MenuItem("Banana", "banana", "A0"));
+        menuItems.add(new MenuItem("Peach", "peach", "A0"));
+        menuItems.add(new MenuItem("Mango", "mango", "A0"));
+        menuItems.add(new MenuItem("Pineapple", "pineapple", "A0"));
+        menuItems.add(new MenuItem("Strawberry", "strawberry", "A0"));
+        menuItems.add(new MenuItem("Orange", "orange", "A0"));
 
-        peachButton = findViewById(R.id.drink1);
-        mangoButton = findViewById(R.id.drink2);
-        strawberryButton = findViewById(R.id.drink3);
+        for (MenuItem item : menuItems) {
+            // Adapted from https://stackoverflow.com/questions/3195668/android-programmatically-include-layout-i-e-without-xml
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
+            View childLayout = inflater.inflate(R.layout.item_card, null);
 
-        peachButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                if (peachSmellEnabled)  {
-                    smellIntent.putExtra("fanSpeed", 0);
-                    smellIntent.putExtra("fanLabel", "A");
-                    peachSmellEnabled = false;
-                } else {
-                    smellIntent.putExtra("fanSpeed",  1);
-                    smellIntent.putExtra("fanLabel", "A");
-                    peachSmellEnabled = true;
+            TextView childName = childLayout.findViewById(R.id.ItemTitle);
+            childName.setText(item.getName());
+
+            ImageView childImage = childLayout.findViewById(R.id.ItemImage);
+            childImage.setImageResource(getResources().getIdentifier(item.getDrawable(), "drawable", getPackageName()));
+
+            childLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    bigImage.setImageResource(getResources().getIdentifier(item.getDrawable(), "drawable", getPackageName()));
+
+                    Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
+                    smellIntent.putExtra("fanControl", item.getScentString());
+                    startService(smellIntent);
                 }
-                startService(smellIntent);
-            }
-        });
+            });
 
-        mangoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                if (mangoSmellEnabled) {
-                    smellIntent.putExtra("fanSpeed", 0);
-                    smellIntent.putExtra("fanLabel", "B");
-                    mangoSmellEnabled = false;
-                } else {
-                    smellIntent.putExtra("fanSpeed", 1);
-                    smellIntent.putExtra("fanLabel", "B");
-                    mangoSmellEnabled = true;
-                }
-                startService(smellIntent);
-            }
-        });
-
-        strawberryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                if (strawberrySmellEnabled) {
-                    smellIntent.putExtra("fanSpeed", 0);
-                    smellIntent.putExtra("fanLabel", "C");
-                    strawberrySmellEnabled = false;
-                } else {
-                    smellIntent.putExtra("fanSpeed", 1);
-                    smellIntent.putExtra("fanLabel", "C");
-                    strawberrySmellEnabled = true;
-                }
-                startService(smellIntent);
-            }
-        });
-
- */
+            menuLayout.addView(childLayout);
+        }
     }
 }

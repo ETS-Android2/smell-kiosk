@@ -15,51 +15,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:id="@+id/ItemList"
+            android:id="@+id/MenuLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <include
-                android:id="@+id/drink1"
-                layout="@layout/item_card"
-                android:layout_width="225dp"
-                android:layout_height="225dp" />
-
-            <include
-                android:id="@+id/drink2"
-                layout="@layout/item_card"
-                android:layout_width="225dp"
-                android:layout_height="225dp" />
-
-            <include
-                android:id="@+id/drink3"
-                layout="@layout/item_card"
-                android:layout_width="225dp"
-                android:layout_height="225dp" />
-
-            <include
-                android:id="@+id/drink4"
-                layout="@layout/item_card"
-                android:layout_width="225dp"
-                android:layout_height="225dp" />
-
-            <include
-                android:id="@+id/drink5"
-                layout="@layout/item_card"
-                android:layout_width="225dp"
-                android:layout_height="225dp" />
-
-            <include
-                android:id="@+id/drink6"
-                layout="@layout/item_card"
-                android:layout_width="225dp"
-                android:layout_height="225dp" />
-        </LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
     </HorizontalScrollView>
 
     <ImageView
-        android:id="@+id/ItemImage"
+        android:id="@+id/BigImage"
         android:layout_width="500dp"
         android:layout_height="500dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"

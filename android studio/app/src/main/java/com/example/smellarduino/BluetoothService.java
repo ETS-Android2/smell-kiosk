@@ -56,7 +56,7 @@ public class BluetoothService extends Service {
                 if(fanSpeed > -1) {
                     // Dispense tickets
                     sendData(fanLabel, fanSpeed);
-                    Toast.makeText(this, "Setting fan speed to " + fanSpeed, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "Setting fan speed to " + fanSpeed, Toast.LENGTH_SHORT).show();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -177,7 +177,11 @@ public class BluetoothService extends Service {
             fanSpeed = 0;
         }
         String msg = fanLabel + fanSpeed + "\n";
-        mmOutputStream.write(msg.getBytes());
+        if (mmOutputStream!=null) {
+            mmOutputStream.write(msg.getBytes());
+        } else {
+            Toast.makeText(this, "Unable to find Bluetooth device", Toast.LENGTH_SHORT).show();
+        }
         Log.v(TAG, "Data Sent: " + msg);
     }
 

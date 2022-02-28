@@ -1,6 +1,7 @@
 package com.example.smellarduino;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +10,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button peachButton;
-    private Button mangoButton;
-    private Button strawberryButton;
+    private ConstraintLayout peachButton;
+    private ConstraintLayout mangoButton;
+    private ConstraintLayout strawberryButton;
     private boolean peachSmellEnabled = false;
     private boolean mangoSmellEnabled = false;
     private boolean strawberrySmellEnabled = false;
@@ -21,13 +22,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Connect to arduino via Bluetooth
-        Intent dispenseIntent = new Intent(this, BluetoothService.class);
-        startService(dispenseIntent);
 
-        peachButton = findViewById(R.id.button);
-        mangoButton = findViewById(R.id.button2);
-        strawberryButton = findViewById(R.id.button3);
+
+        // Connect to arduino via Bluetooth
+//        Intent dispenseIntent = new Intent(this, BluetoothService.class);
+//        startService(dispenseIntent);
+
+        peachButton = findViewById(R.id.drink1);
+        mangoButton = findViewById(R.id.drink2);
+        strawberryButton = findViewById(R.id.drink3);
 
         peachButton.setOnClickListener(new View.OnClickListener() {
             @Override

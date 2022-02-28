@@ -6,34 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="160dp"
-        android:text="Peach"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <HorizontalScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="263dp"
-        android:text="Mango"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/ItemList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="372dp"
-        android:text="Strawberry"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <include
+                android:id="@+id/drink1"
+                layout="@layout/item_card"
+                android:layout_width="225dp"
+                android:layout_height="225dp" />
 
+            <include
+                android:id="@+id/drink2"
+                layout="@layout/item_card"
+                android:layout_width="225dp"
+                android:layout_height="225dp" />
+
+            <include
+                android:id="@+id/drink3"
+                layout="@layout/item_card"
+                android:layout_width="225dp"
+                android:layout_height="225dp" />
+
+            <include
+                android:id="@+id/drink4"
+                layout="@layout/item_card"
+                android:layout_width="225dp"
+                android:layout_height="225dp" />
+
+            <include
+                android:id="@+id/drink5"
+                layout="@layout/item_card"
+                android:layout_width="225dp"
+                android:layout_height="225dp" />
+
+            <include
+                android:id="@+id/drink6"
+                layout="@layout/item_card"
+                android:layout_width="225dp"
+                android:layout_height="225dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/ItemImage"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty_cup" />
 </androidx.constraintlayout.widget.ConstraintLayout>

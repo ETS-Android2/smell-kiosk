@@ -16,11 +16,14 @@ import android.widget.TextView;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout menuLayout;
     private ImageView bigImage;
+    private TextView bigText;
     private ArrayList<MenuItem> menuItems = new ArrayList<>();
 
     @Override
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         menuLayout = this.findViewById(R.id.MenuLayout);
         bigImage = this.findViewById(R.id.BigImage);
+        bigText = this.findViewById(R.id.BigText);
 
         menuItems.add(new MenuItem("Banana", "banana", "A0"));
         menuItems.add(new MenuItem("Peach", "peach", "A0"));
@@ -40,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("Pineapple", "pineapple", "A0"));
         menuItems.add(new MenuItem("Strawberry", "strawberry", "A0"));
         menuItems.add(new MenuItem("Orange", "orange", "A0"));
+        menuItems.add(new MenuItem("Banana Mango", "banana_mango", "A0"));
+        menuItems.add(new MenuItem("Mango Peach", "mango_peach", "A0"));
 
         for (MenuItem item : menuItems) {
             // Adapted from https://stackoverflow.com/questions/3195668/android-programmatically-include-layout-i-e-without-xml
@@ -56,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     bigImage.setImageResource(getResources().getIdentifier(item.getDrawable(), "drawable", getPackageName()));
+                    bigText.setText(item.getName());
 
                     Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                     smellIntent.putExtra("fanControl", item.getScentString());

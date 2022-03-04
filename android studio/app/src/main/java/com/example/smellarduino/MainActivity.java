@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView bigImage;
     private TextView bigText;
     private ArrayList<MenuItem> menuItems = new ArrayList<>();
+    private Button activityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         bigImage = this.findViewById(R.id.BigImage);
         bigText = this.findViewById(R.id.BigText);
 
-        menuItems.add(new MenuItem("Banana", "banana", "A0"));
-        menuItems.add(new MenuItem("Peach", "peach", "A0"));
-        menuItems.add(new MenuItem("Mango", "mango", "A0"));
-        menuItems.add(new MenuItem("Pineapple", "pineapple", "A0"));
+        menuItems.add(new MenuItem("Banana", "banana", "D1"));
+        menuItems.add(new MenuItem("Peach", "peach", "D0"));
+        menuItems.add(new MenuItem("Mango", "mango", "D1"));
+        menuItems.add(new MenuItem("Pineapple", "pineapple", "D0"));
         menuItems.add(new MenuItem("Strawberry", "strawberry", "A0"));
         menuItems.add(new MenuItem("Orange", "orange", "A0"));
         menuItems.add(new MenuItem("Banana Mango", "banana_mango", "A0"));
@@ -71,6 +73,18 @@ public class MainActivity extends AppCompatActivity {
             });
 
             menuLayout.addView(childLayout);
+
+            activityButton = findViewById(R.id.activityButton);
+            activityButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
+                    smellIntent.putExtra("fanControl", "A0B0C0D0E0F0");
+                    startService(smellIntent);
+                    Intent intent = new Intent(MainActivity.this, IndividualFlavorActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
 }

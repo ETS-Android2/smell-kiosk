@@ -176,7 +176,9 @@ public class BluetoothService extends Service {
 
     void closeBT() throws IOException {
         stopWorker = true;
-        mmOutputStream.close();
+        if (mmOutputStream!=null) {
+            mmOutputStream.close();
+        }
         mmInputStream.close();
         mmSocket.close();
         Log.v(TAG, "Bluetooth Closed");

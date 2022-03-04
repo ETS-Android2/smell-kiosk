@@ -15,6 +15,12 @@ public class IndividualFlavorActivity extends AppCompatActivity {
     private Button button4;
     private Button button5;
     private Button button6;
+    private boolean fanAOn = false;
+    private boolean fanBOn = false;
+    private boolean fanCOn = false;
+    private boolean fanDOn = false;
+    private boolean fanEOn = false;
+    private boolean fanFOn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +44,15 @@ public class IndividualFlavorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                smellIntent.putExtra("fanControl", "A1B0C0D0E0F0");
+                if (!fanAOn) {
+                    smellIntent.putExtra("fanControl", "A1");
+                    button1.setText("turn A off");
+                    fanAOn = true;
+                } else {
+                    smellIntent.putExtra("fanControl", "A0");
+                    button1.setText("turn A on");
+                    fanAOn = false;
+                }
                 startService(smellIntent);
             }
         });
@@ -48,47 +62,87 @@ public class IndividualFlavorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                smellIntent.putExtra("fanControl", "A0B1C0D0E0F0");
+                if (!fanBOn) {
+                    smellIntent.putExtra("fanControl", "B1");
+                    button2.setText("turn b off");
+                    fanBOn = true;
+                } else {
+                    smellIntent.putExtra("fanControl", "B0");
+                    button2.setText("turn B on");
+                    fanBOn = false;
+                }
                 startService(smellIntent);
             }
         });
 
-        button3 = findViewById(R.id.button1);
+        button3 = findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                smellIntent.putExtra("fanControl", "A0B0C1D0E0F0");
+                if (!fanCOn) {
+                    smellIntent.putExtra("fanControl", "C1");
+                    button3.setText("turn C off");
+                    fanCOn = true;
+                } else {
+                    smellIntent.putExtra("fanControl", "C0");
+                    button3.setText("turn C on");
+                    fanCOn = false;
+                }
                 startService(smellIntent);
             }
         });
 
-        button4 = findViewById(R.id.button1);
+        button4 = findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                smellIntent.putExtra("fanControl", "A0B0C0D1E0F0");
+                if (!fanDOn) {
+                    smellIntent.putExtra("fanControl", "D1");
+                    button4.setText("turn D off");
+                    fanDOn = true;
+                } else {
+                    smellIntent.putExtra("fanControl", "D0");
+                    button4.setText("turn D on");
+                    fanDOn = false;
+                }
                 startService(smellIntent);
             }
         });
 
-        button5 = findViewById(R.id.button1);
+        button5 = findViewById(R.id.button5);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                smellIntent.putExtra("fanControl", "A0B0C0D0E1F0");
+                if (!fanEOn) {
+                    smellIntent.putExtra("fanControl", "E1");
+                    button5.setText("turn E off");
+                    fanEOn = true;
+                } else {
+                    smellIntent.putExtra("fanControl", "E0");
+                    button5.setText("turn E on");
+                    fanEOn = false;
+                }
                 startService(smellIntent);
             }
         });
 
-        button6 = findViewById(R.id.button1);
+        button6 = findViewById(R.id.button6);
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
-                smellIntent.putExtra("fanControl", "A0B0C0D0E0F1");
+                if (!fanFOn) {
+                    smellIntent.putExtra("fanControl", "F1");
+                    button6.setText("turn F off");
+                    fanFOn = true;
+                } else {
+                    smellIntent.putExtra("fanControl", "F0");
+                    button6.setText("turn F on");
+                    fanFOn = false;
+                }
                 startService(smellIntent);
             }
         });

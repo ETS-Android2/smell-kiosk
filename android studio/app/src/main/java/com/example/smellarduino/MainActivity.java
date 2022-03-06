@@ -40,14 +40,17 @@ public class MainActivity extends AppCompatActivity {
         bigImage = this.findViewById(R.id.BigImage);
         bigText = this.findViewById(R.id.BigText);
 
-        menuItems.add(new MenuItem("Banana", "banana", "D1"));
-        menuItems.add(new MenuItem("Peach", "peach", "D0"));
-        menuItems.add(new MenuItem("Mango", "mango", "D1"));
-        menuItems.add(new MenuItem("Pineapple", "pineapple", "D0"));
-        menuItems.add(new MenuItem("Strawberry", "strawberry", "A0"));
-        menuItems.add(new MenuItem("Orange", "orange", "A0"));
-        menuItems.add(new MenuItem("Banana Mango", "banana_mango", "A0"));
-        menuItems.add(new MenuItem("Mango Peach", "mango_peach", "A0"));
+
+        menuItems.add(new MenuItem("Mango", "mango", "A1B0C0D0E0F0"));
+        menuItems.add(new MenuItem("Orange", "orange", "A0B1C0D0E0F0"));
+        menuItems.add(new MenuItem("Pineapple", "pineapple", "A0B1C0D0E0F0"));
+        menuItems.add(new MenuItem("Strawberry", "strawberry", "A0B0C0D1E0F0"));
+        menuItems.add(new MenuItem("Peach", "peach", "A0B0C0D0E1F0"));
+        menuItems.add(new MenuItem("Banana", "banana", "A0B0C0D0E0F1"));
+        menuItems.add(new MenuItem("Banana Mango", "banana_mango", "A1B0C0D0E0F1"));
+        menuItems.add(new MenuItem("Mango Peach", "mango_peach", "A1B0C0D0E1F0"));
+        menuItems.add(new MenuItem("Exhaust On", "empty_cup", "G1"));
+        menuItems.add(new MenuItem("Exhaust Off", "empty_cup", "G0"));
 
         for (MenuItem item : menuItems) {
             // Adapted from https://stackoverflow.com/questions/3195668/android-programmatically-include-layout-i-e-without-xml

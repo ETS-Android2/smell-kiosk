@@ -16,3 +16,9 @@ Our next concern was figuring out how to deliver individual scents to the user. 
 In spite of our initial concern regarding clearing the air prior to delivering a new scent, we found that a scent effectively cleared on its own if we did not actively blow it towards a user. Therefore, we did not feel it necessary to implement a complex system to clear a scent. Instead, we simply added an exhaust fan separate from the others in order to blow unscented air towards a user and further clear the scent. 
 
 Although we purchased 11 flavors of essential oil, we settled on using 6 flavors: pineapple, mango, strawberry, banana, orange, and peach. We settled on these flavors due to their recognizability and popularity in smoothies. 
+
+**Implementation**
+
+The bulk of our project was hardware based. We used 7 80 mm fans to deliver and clear scents. We controlled the fans using an Arduino Uno with a pulse-width modulation (PWM) signal to control the fan speed. In order to communicate with the Arduino Uno to toggle different fans, we developed an Android app on Android studio. The application consists of a carousel of smoothie selections, each one connected to a specific configuration of fans. Selecting a flavor causes the application to communicate with the Arduino over Bluetooth and turn on the corresponding fans. 
+
+**User Experience**

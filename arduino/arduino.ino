@@ -12,7 +12,6 @@ bool fanDOn = false;
 bool fanEOn = false;
 bool fanFOn = false;
 bool fanExhaustOn = false;
-int fanSpeed = 150;
 
 void setup() {
   pinMode(fanAPin, OUTPUT);
@@ -77,11 +76,11 @@ void loop() {
     }
   }
   
-  analogWrite(fanAPin, fanAOn ? fanSpeed : 0);
-  analogWrite(fanBPin, fanBOn ? fanSpeed : 0);
-  analogWrite(fanCPin, fanCOn ? fanSpeed : 0);
-  analogWrite(fanDPin, fanDOn ? fanSpeed : 0);
-  analogWrite(fanEPin, fanEOn ? fanSpeed : 0);
-  analogWrite(fanFPin, fanFOn ? fanSpeed : 0);
+  analogWrite(fanAPin, fanAOn ? 255 : 0);
+  analogWrite(fanBPin, fanBOn ? 200 : 0);
+  analogWrite(fanCPin, fanCOn ? 200 : 0);
+  analogWrite(fanDPin, fanDOn ? 200 : 0);
+  analogWrite(fanEPin, fanEOn ? 200 : 0);
+  analogWrite(fanFPin, fanFOn ? 170 : 0);
   digitalWrite(fanExhaustPin, fanExhaustOn ? HIGH : LOW);
 }

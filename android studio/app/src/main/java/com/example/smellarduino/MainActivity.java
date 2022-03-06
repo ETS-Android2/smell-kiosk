@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
         menuItems.add(new MenuItem("Banana", "banana", "A0B0C0D0E0F1G0"));
         menuItems.add(new MenuItem("Banana Mango", "banana_mango", "A1B0C0D0E0F1G0"));
         menuItems.add(new MenuItem("Mango Peach", "mango_peach", "A1B0C0D0E1F0G0"));
+        menuItems.add(new MenuItem("Strawberry Banana", "strawberry_banana", "A0B0C0D1E0F1G0"));
+        menuItems.add(new MenuItem("Mango Pineapple", "mango_pineapple", "A1B0C1D0E0F0G0"));
         menuItems.add(new MenuItem("Exhaust On", "empty_cup", "G1"));
         menuItems.add(new MenuItem("Exhaust Off", "empty_cup", "G0"));
 

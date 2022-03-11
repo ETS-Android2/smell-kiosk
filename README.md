@@ -21,4 +21,13 @@ Although we purchased 11 flavors of essential oil, we settled on using 6 flavors
 
 The bulk of our project was hardware based. We used 7 80 mm fans to deliver and clear scents. We controlled the fans using an Arduino Uno with a pulse-width modulation (PWM) signal to control the fan speed. In order to communicate with the Arduino Uno to toggle different fans, we developed an Android app on Android studio. The application consists of a carousel of smoothie selections, each one connected to a specific configuration of fans. Selecting a flavor causes the application to communicate with the Arduino over Bluetooth and turn on the corresponding fans. 
 
-**User Experience**
+**Experiment Procedure**
+
+**Food Coloring**
+Prepare two drinks: one sip of sparkling water with orange food coloring and one sip of sparkling water with yellow food coloring. Turn the orange scent on and make sure the user can smell it. Hand them the drink, telling them it's flavored, and make sure the user can see the color of their drink. Have them take a sip while smelling the orange scent, without telling them what they're smelling. Ask what flavor they think it is. If they respond that they cannot taste the flavor, record this but ask them what flavor they would guess if they were forced to guess.
+
+**Flavored Water** 
+Prepare two servings of lemonade. Hand the user the drink, telling them it's flavored, and make sure the user can smell the scent we turn on. For the first serving, turn on orange (in hopes of fooling them since both lemons and oranges are citrus fruits) and for the second serving turn on strawberry (in hopes of making them think it's strawberry lemonade). In both cases, ask them what flavor they think they're tasting.
+
+**Scent Identification**
+Blow each scent to the user one at a time. Ask the user to identify each scent and record responses.

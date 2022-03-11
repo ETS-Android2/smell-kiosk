@@ -22,6 +22,12 @@ public class IndividualFlavorActivity extends AppCompatActivity {
     private boolean fanEOn = false;
     private boolean fanFOn = false;
 
+    //A Mango
+    //B Orange
+    //C Pineapple
+    //D Strawberry
+    //E Peach
+    //F Banana
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +52,11 @@ public class IndividualFlavorActivity extends AppCompatActivity {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                 if (!fanAOn) {
                     smellIntent.putExtra("fanControl", "A1");
-                    button1.setText("turn A off");
+                    button1.setText("Remove Mango");
                     fanAOn = true;
                 } else {
                     smellIntent.putExtra("fanControl", "A0");
-                    button1.setText("turn A on");
+                    button1.setText("Add Mango");
                     fanAOn = false;
                 }
                 startService(smellIntent);
@@ -64,11 +70,11 @@ public class IndividualFlavorActivity extends AppCompatActivity {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                 if (!fanBOn) {
                     smellIntent.putExtra("fanControl", "B1");
-                    button2.setText("turn b off");
+                    button2.setText("Remove Orange");
                     fanBOn = true;
                 } else {
                     smellIntent.putExtra("fanControl", "B0");
-                    button2.setText("turn B on");
+                    button2.setText("Add Orange");
                     fanBOn = false;
                 }
                 startService(smellIntent);
@@ -82,11 +88,11 @@ public class IndividualFlavorActivity extends AppCompatActivity {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                 if (!fanCOn) {
                     smellIntent.putExtra("fanControl", "C1");
-                    button3.setText("turn C off");
+                    button3.setText("Remove Pineapple");
                     fanCOn = true;
                 } else {
                     smellIntent.putExtra("fanControl", "C0");
-                    button3.setText("turn C on");
+                    button3.setText("Add Pineapple");
                     fanCOn = false;
                 }
                 startService(smellIntent);
@@ -100,11 +106,11 @@ public class IndividualFlavorActivity extends AppCompatActivity {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                 if (!fanDOn) {
                     smellIntent.putExtra("fanControl", "D1");
-                    button4.setText("turn D off");
+                    button4.setText("Remove Strawberry");
                     fanDOn = true;
                 } else {
                     smellIntent.putExtra("fanControl", "D0");
-                    button4.setText("turn D on");
+                    button4.setText("Add Strawberry");
                     fanDOn = false;
                 }
                 startService(smellIntent);
@@ -118,11 +124,11 @@ public class IndividualFlavorActivity extends AppCompatActivity {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                 if (!fanEOn) {
                     smellIntent.putExtra("fanControl", "E1");
-                    button5.setText("turn E off");
+                    button5.setText("Remove Peach");
                     fanEOn = true;
                 } else {
                     smellIntent.putExtra("fanControl", "E0");
-                    button5.setText("turn E on");
+                    button5.setText("Add Peach");
                     fanEOn = false;
                 }
                 startService(smellIntent);
@@ -136,11 +142,11 @@ public class IndividualFlavorActivity extends AppCompatActivity {
                 Intent smellIntent = new Intent(getApplicationContext(), BluetoothService.class);
                 if (!fanFOn) {
                     smellIntent.putExtra("fanControl", "F1");
-                    button6.setText("turn F off");
+                    button6.setText("Remove Banana");
                     fanFOn = true;
                 } else {
                     smellIntent.putExtra("fanControl", "F0");
-                    button6.setText("turn F on");
+                    button6.setText("Add Banana");
                     fanFOn = false;
                 }
                 startService(smellIntent);

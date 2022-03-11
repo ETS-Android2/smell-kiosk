@@ -24,10 +24,13 @@ The bulk of our project was hardware based. We used 7 80 mm fans to deliver and 
 **Experiment Procedure**
 
 **Food Coloring**
-Prepare two drinks: one sip of sparkling water with orange food coloring and one sip of sparkling water with yellow food coloring. Turn the orange scent on and make sure the user can smell it. Hand them the drink, telling them it's flavored, and make sure the user can see the color of their drink. Have them take a sip while smelling the orange scent, without telling them what they're smelling. Ask what flavor they think it is. If they respond that they cannot taste the flavor, record this but ask them what flavor they would guess if they were forced to guess.
+Prepare two drinks: one sip of sparkling water with orange food coloring and one sip of sparkling water with yellow food coloring. Turn the orange scent on and make sure the user can smell it. Hand them the drink, telling them it's flavored, and make sure the user can see the color of their drink. Have them take a sip while smelling the orange scent, without telling them what they're smelling or showing them the tablet screen. Ask what flavor they think it is. If they respond that they cannot taste the flavor, record this but ask them what flavor they would guess if they were forced to guess.
 
 **Flavored Water** 
 Prepare two servings of lemonade. Hand the user the drink, telling them it's flavored, and make sure the user can smell the scent we turn on. For the first serving, turn on orange (in hopes of fooling them since both lemons and oranges are citrus fruits) and for the second serving turn on strawberry (in hopes of making them think it's strawberry lemonade). In both cases, ask them what flavor they think they're tasting.
 
 **Scent Identification**
 Blow each scent to the user one at a time. Ask the user to identify each scent and record responses.
+
+**Miscellaneous**
+Ask the user how we can improve our experiment for the future.

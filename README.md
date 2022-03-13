@@ -47,12 +47,12 @@ The bulk of our project was hardware based. We used seven computer fans to deliv
 ## Pictures
 
 <div class="center-image">
-    <img src="front.jpg" style="height: 400px">
-    <img src="back.jpg" style="height: 400px">
-    <img src="inside-1.jpg" style="height: 400px">
-    <img src="inside-2.jpg" style="height: 400px">
-    <img src="internals.jpg" style="height: 400px">
-    <img src="o.jpg" style="height: 400px">
+    <img src="front.jpg" style="height: 300px">
+    <img src="back.jpg" style="height: 300px">
+    <img src="inside-1.jpg" style="height: 300px">
+    <img src="inside-2.jpg" style="height: 300px">
+    <img src="internals.jpg" style="height: 300px">
+    <img src="o.jpg" style="height: 300px">
 </div>
 
 # Experiment Procedure

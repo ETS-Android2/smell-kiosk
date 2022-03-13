@@ -15,6 +15,8 @@
 
 Group Members: Andrew Lu, Xingbu Qin, Vivian Ross
 
+[View the GitHub repo here](https://github.com/andrewhlu/smell-kiosk)
+
 ## Overview
 
 The goal of this project is to augment the sense of smell. To this end, we decided to create a digital ordering kiosk for a hypothetical smoothie shop. Just as current ordering kiosks allow a customer to order and pay for a meal, our smoothie kiosk would allow customers to select between different flavors of smoothies. However, in addition to just ordering a smoothie, our kiosk would allow a customer to smell the different available flavors in order to get an idea of what their smoothie might taste like. 

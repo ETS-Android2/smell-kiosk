@@ -23,14 +23,60 @@ The bulk of our project was hardware based. We used 7 80 mm fans to deliver and 
 
 **Experiment Procedure**
 
-**Food Coloring**
+**Experiment 1: Food Coloring (Vision, Smell, and Taste)**
 Prepare two drinks: one sip of sparkling water with orange food coloring and one sip of sparkling water with yellow food coloring. Turn the orange scent on and make sure the user can smell it. Hand them the drink, telling them it's flavored, and make sure the user can see the color of their drink. Have them take a sip while smelling the orange scent, without telling them what they're smelling or showing them the tablet screen. Ask what flavor they think it is. If they respond that they cannot taste the flavor, record this but ask them what flavor they would guess if they were forced to guess.
 
-**Flavored Water** 
+**Experiment 2: Flavored Water (Smell and Taste)** 
 Prepare two servings of lemonade. Hand the user the drink, telling them it's flavored, and make sure the user can smell the scent we turn on. For the first serving, turn on orange (in hopes of fooling them since both lemons and oranges are citrus fruits) and for the second serving turn on strawberry (in hopes of making them think it's strawberry lemonade). In both cases, ask them what flavor they think they're tasting.
 
-**Scent Identification**
-Blow each scent to the user one at a time. Ask the user to identify each scent and record responses.
+**Experiment 3: Scent Identification**
+Blow each scent to the user one at a time. Ask the user to identify each scent and record responses. Give the user a hint by informing them that each scent is a fruit, and repeat the procedure again.
 
 **Miscellaneous**
 Ask the user how we can improve our experiment for the future.
+
+**Experiment Results**
+
+**Experiment 1 Results**
+
+| Color | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
+| ----- | ------------- | ------------- | ------------- | ------------- |
+| Yellow | Lemon | Bubblegum | Seltzer | |
+| Orange | Lemon | Coconut | Seltzer | |
+
+As shown, one participant was influenced by the yellow color to think that the first yellow drink was lemon flavored. However, this participant found the following orange drink to taste the same. Other participants were unaffected by the color, with one participant correctly identifying the drink as seltzer. One participant may have been influenced by the sweet smell in tasting bubblegum and coconut flavors.
+
+**Experiment 2 Results**
+
+| Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
+| ----- | ------------- | ------------- | ------------- | ------------- |
+| Orange | Lemonade | Lemon | Lemon | |
+| Strawberry | Lemonade | Lemon/Lime | Sugary Lemon | |
+
+As shown, the smell had no effect on the participants' perception of the taste of the drink. All of them tasted the lemonade flavor.
+
+**Experiment 3 Results**
+
+No Hint:
+
+| Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
+| ----- | ------------- | ------------- | ------------- | ------------- |
+| Mango | Vanilla/Play Doh | Coconut/Pina Colada | Fresh Air/Citrus | |
+| Orange | Vanilla Lotion | Blossom | Wood Cleaner | |
+| Pineapple | Brown Sugar/Cinnamon | Vanilla/Coconut | Coconut/Pineapple | |
+| Strawberry | Birthday Cake | Rose/Bubblegum | Guava | |
+| Peach | No Idea | Apple | Poop/Flowers | |
+| Banana | Root Beer | Bubblegum/Candy | Artificial Banana | |
+
+Hint:
+
+| Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
+| ----- | ------------- | ------------- | ------------- | ------------- |
+| Mango | Banana | Orange | Strawberry | |
+| Orange | Lemon | Strawberry | Orange | |
+| Pineapple | Cooked Apple | Banana | Banana | |
+| Strawberry | Banana | Grape | Mango | |
+| Peach | Pear | Apple | Peach | |
+| Banana | Banana | Pear | Banana | |
+
+As shown, without being told that the flavors were all fruits, participants could not identify the scents at all. Even after knowing that the scents were fruits, they still did not correctly identify a majority of the scents. Participants commented that the scents were very artificial and difficult to identify. This may explain our poor results in the previous experiments.

@@ -110,7 +110,7 @@ No Hint:
 | Peach | No Idea | Apple | Poop/Flowers | |
 | Banana | Root Beer | Bubblegum/Candy | Artificial Banana | |
 
-Hint:
+With Hint:
 
 | Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
 | ----- | ------------- | ------------- | ------------- | ------------- |
@@ -122,3 +122,9 @@ Hint:
 | Banana | Banana | Pear | Banana | |
 
 As shown, without being told that the flavors were all fruits, participants could not identify the scents at all. Even after knowing that the scents were fruits, they still did not correctly identify a majority of the scents. Participants commented that the scents were very artificial and difficult to identify. This may explain our poor results in the previous experiments.
+
+# Future Improvements
+
+The main problem with our project is that the scents are unrecognizable. We received feedback from our participants that the scents are very artificial, and the users were unable to correctly identify the majority of the scents. It is likely that this affected our results for all three experiments, so it is vital that if we improve this project, we focus on selecting more authentic scents.
+
+In addition, our delivery system could use some improvement. In experiment 3, some of the participants smelled the banana scent even when they were supposed to be smelling a different scent. It is possible that they were just unable to identify the fruit smell correctly, but it is also possible that the banana scent was leaking through the tube when it was not supposed to be. Therefore, our delivery system could use a better way of preventing smells from leaking through it. In addition, we also need to make our smells consistent in how strong they are.

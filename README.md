@@ -44,6 +44,8 @@ The bulk of our project was hardware based. We used seven computer fans to deliv
 
 ![Diagram](diagram.jpg)
 
+## Pictures
+
 <div class="center-image">
     <img src="front.jpg" style="height: 400px">
     <img src="back.jpg" style="height: 400px">

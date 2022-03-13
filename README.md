@@ -17,8 +17,8 @@ The goal of this project is to augment the sense of smell. To this end, we decid
 
 Our project also has a research component. We are curious as to how large an effect visual and olfactory cues have on a person's perception of taste. We are planning to test this using our smell delivery system and various flavors of water. Our hypothesis is that delivering a smell that does not match the flavoring of the water will confuse a user and cause them to perceive a taste that is different from the flavoring we provided. In addition, we are planning to use food coloring to test whether the visual appearance of a drink affects a user's perception of its flavor.
 
-<div class="container-image">
-    <img src="kiosk.jpg" style="height: 200px">
+<div class="center-image">
+    <img src="kiosk.jpg" style="height: 600px">
 </div>
 
 ## Design
@@ -40,7 +40,18 @@ Although we purchased 11 flavors of essential oil, we settled on the following 6
 
 ## Implementation
 
-The bulk of our project was hardware based. We used seven computer fans to deliver and clear scents. We controlled the fans using an Arduino Uno with a pulse-width modulation (PWM) signal that controlled the fan speed. In order to communicate with the Arduino Uno to toggle different fans, we developed an Android app on Android studio. The application consists of a carousel of smoothie selections, each one connected to a specific configuration of fans. Selecting a flavor causes the application to communicate with the Arduino over Bluetooth and turn on the corresponding fans. 
+The bulk of our project was hardware based. We used seven computer fans to deliver and clear scents. We controlled the fans using an Arduino Uno with a pulse-width modulation (PWM) signal that controlled the fan speed. In order to communicate with the Arduino Uno to toggle different fans, we developed an Android app on Android studio. The application consists of a carousel of smoothie selections, each one connected to a specific configuration of fans. Selecting a flavor causes the application to communicate with the Arduino over Bluetooth and turn on the corresponding fans.
+
+![Diagram](diagram.jpg)
+
+<div class="center-image">
+    <img src="front.jpg" style="height: 400px">
+    <img src="back.jpg" style="height: 400px">
+    <img src="inside-1.jpg" style="height: 400px">
+    <img src="inside-2.jpg" style="height: 400px">
+    <img src="internals.jpg" style="height: 400px">
+    <img src="o.jpg" style="height: 400px">
+</div>
 
 # Experiment Procedure
 

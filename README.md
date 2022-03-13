@@ -5,6 +5,10 @@
         justify-content: center;
         align-items: center;
     }
+
+    .markdown-body h1:first-of-type {
+        display: none;
+    }
 </style>
 
 # Smell Kiosk

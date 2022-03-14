@@ -85,8 +85,8 @@ Ask the user how we can improve our experiment for the future.
 
 | Color | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
 | ----- | ------------- | ------------- | ------------- | ------------- |
-| Yellow | Lemon | Bubblegum | Seltzer | |
-| Orange | Lemon | Coconut | Seltzer | |
+| Yellow | Lemon | Bubblegum | Seltzer | Nothing |
+| Orange | Lemon | Coconut | Seltzer | Nothing |
 
 As shown, one participant was influenced by the yellow color to think that the first yellow drink was lemon flavored. However, this participant found the following orange drink to taste the same. Other participants were unaffected by the color, with one participant correctly identifying the drink as seltzer. One participant may have been influenced by the sweet smell in tasting bubblegum and coconut flavors.
 
@@ -94,8 +94,8 @@ As shown, one participant was influenced by the yellow color to think that the f
 
 | Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
 | ----- | ------------- | ------------- | ------------- | ------------- |
-| Orange | Lemonade | Lemon | Lemon | |
-| Strawberry | Lemonade | Lemon/Lime | Sugary Lemon | |
+| Orange | Lemonade | Lemon | Lemon | Lemon |
+| Strawberry | Lemonade | Lemon/Lime | Sugary Lemon | Lemon |
 
 As shown, the smell had no effect on the participants' perception of the taste of the drink. All of them tasted the lemonade flavor.
 
@@ -105,23 +105,23 @@ No Hint:
 
 | Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
 | ----- | ------------- | ------------- | ------------- | ------------- |
-| Mango | Vanilla/Play Doh | Coconut/Pina Colada | Fresh Air/Citrus | |
-| Orange | Vanilla Lotion | Blossom | Wood Cleaner | |
-| Pineapple | Brown Sugar/Cinnamon | Vanilla/Coconut | Coconut/Pineapple | |
-| Strawberry | Birthday Cake | Rose/Bubblegum | Guava | |
-| Peach | No Idea | Apple | Poop/Flowers | |
-| Banana | Root Beer | Bubblegum/Candy | Artificial Banana | |
+| Mango | Vanilla/Play Doh | Coconut/Pina Colada | Fresh Air/Citrus | Nothing |
+| Orange | Vanilla Lotion | Blossom | Wood Cleaner | Grapefruit |
+| Pineapple | Brown Sugar/Cinnamon | Vanilla/Coconut | Coconut/Pineapple | Grapefruit |
+| Strawberry | Birthday Cake | Rose/Bubblegum | Guava | Grape / Mango |
+| Peach | No Idea | Apple | Poop/Flowers | Mango |
+| Banana | Root Beer | Bubblegum/Candy | Artificial Banana | Bubblegum |
 
 With Hint:
 
 | Scent | Participant 1 | Participant 2 | Participant 3 | Participant 4 |
 | ----- | ------------- | ------------- | ------------- | ------------- |
-| Mango | Banana | Orange | Strawberry | |
-| Orange | Lemon | Strawberry | Orange | |
-| Pineapple | Cooked Apple | Banana | Banana | |
-| Strawberry | Banana | Grape | Mango | |
-| Peach | Pear | Apple | Peach | |
-| Banana | Banana | Pear | Banana | |
+| Mango | Banana | Orange | Strawberry | Nothing |
+| Orange | Lemon | Strawberry | Orange | Citrus |
+| Pineapple | Cooked Apple | Banana | Banana | Pineapple / Peach |
+| Strawberry | Banana | Grape | Mango | Peach / Banana |
+| Peach | Pear | Apple | Peach | Peach |
+| Banana | Banana | Pear | Banana | Banana |
 
 As shown, without being told that the flavors were all fruits, participants could not identify the scents at all. Even after knowing that the scents were fruits, they still did not correctly identify a majority of the scents. Participants commented that the scents were very artificial and difficult to identify. This may explain our poor results in the previous experiments.
 

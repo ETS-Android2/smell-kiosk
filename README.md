@@ -59,6 +59,9 @@ The bulk of our project was hardware based. We used seven computer fans to deliv
     <img src="inside-2.jpg" style="height: 300px">
     <img src="internals.jpg" style="height: 300px">
     <img src="o.jpg" style="height: 300px">
+    <img src="android-1.png" style="height: 300px">
+    <img src="android-2.png" style="height: 300px">
+    <img src="android-3.png" style="height: 300px">
 </div>
 
 # Experiment Procedure

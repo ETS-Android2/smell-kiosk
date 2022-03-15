@@ -133,3 +133,13 @@ As shown, without being told that the flavors were all fruits, participants coul
 The main problem with our project is that the scents are unrecognizable. We received feedback from our participants that the scents are very artificial, and the users were unable to correctly identify the majority of the scents. It is likely that this affected our results for all three experiments, so it is vital that if we improve this project, we focus on selecting more authentic scents.
 
 In addition, our delivery system could use some improvement. In experiment 3, some of the participants smelled the banana scent even when they were supposed to be smelling a different scent. It is possible that they were just unable to identify the fruit smell correctly, but it is also possible that the banana scent was leaking through the tube when it was not supposed to be. Therefore, our delivery system could use a better way of preventing smells from leaking through it. In addition, we also need to make our smells consistent in how strong they are.
+
+# Project Logistics
+
+Every group member contributed equally to this project. Each person's contributions can be broken down as follows:
+
+- Andrew: Arduino code
+- Xingbu: Hardware and circuitry assembly
+- Vivian: Android studio code
+
+Each member contributed equally to project documentation. In addition, each member contributed equally to the user study part of the project.
